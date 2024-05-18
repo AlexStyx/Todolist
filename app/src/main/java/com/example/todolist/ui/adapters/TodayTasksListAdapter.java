@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,12 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import java.util.List;
+import com.example.todolist.R;
+import com.example.todolist.logic.models.Task;
 
-class Task {
-    Boolean isDone;
-    String title;
-}
+import java.util.List;
 
 public class TodayTasksListAdapter extends ArrayAdapter {
     private LayoutInflater inflater;

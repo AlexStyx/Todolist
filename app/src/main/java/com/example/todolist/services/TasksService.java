@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -10,6 +10,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+
+import com.example.todolist.ui.activity.MainActivity;
+import com.example.todolist.R;
 
 public class TasksService extends Service {
 

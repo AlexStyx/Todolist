@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.ui.fragments;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +9,10 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.todolist.logic.models.Task;
+import com.example.todolist.ui.adapters.InboxListAdapter;
+import com.example.todolist.R;
 
 import java.util.ArrayList;
 import java.util.List;

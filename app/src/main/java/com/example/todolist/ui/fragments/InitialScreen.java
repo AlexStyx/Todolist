@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,13 +11,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import com.example.todolist.ui.activity.MainActivity;
+import com.example.todolist.R;
+import com.example.todolist.logic.models.TasksViewModel;
+
 import java.util.Objects;
 
 public class InitialScreen extends Fragment {
 
+    private TasksViewModel viewModel;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        viewModel = ((MainActivity)requireActivity()).getSharedViewModel();
+
         View view = inflater.inflate(R.layout.initial_screen, container, false);
 
         Button todaysButton = view.findViewById(R.id.today_button);

@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.todolist.R;
+import com.example.todolist.logic.models.Task;
+
 import java.util.List;
 
 public class InboxListAdapter extends RecyclerView.Adapter<InboxListAdapter.ViewHolder> {
@@ -18,7 +21,7 @@ public class InboxListAdapter extends RecyclerView.Adapter<InboxListAdapter.View
     private final List<Task> tasks;
 
     private OnClickTaskListener clickListener;
-    InboxListAdapter(Context context, List<Task> tasks) {
+    public InboxListAdapter(Context context, List<Task> tasks) {
         this.inflater = LayoutInflater.from(context);
         this.tasks = tasks;
     }

@@ -16,17 +16,35 @@
         <action
             android:id="@+id/initial_to_today_action"
             app:destination="@id/Today" />
+        <action
+            android:id="@+id/initial_to_create"
+            app:destination="@id/CreateTask" />
     </fragment>
 
     <fragment
         android:id="@+id/Inbox"
         android:name="com.example.todolist.Inbox"
         android:label="Inbox">
+
+        <action
+            android:id="@+id/inbox_to_create"
+            app:destination="@id/CreateTask" />
     </fragment>
 
     <fragment
         android:id="@+id/Today"
         android:name="com.example.todolist.TodayList"
         android:label="Today">
+
+        <action
+            android:id="@+id/today_to_create"
+            app:destination="@id/CreateTask" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/CreateTask"
+        android:name="com.example.todolist.CreateTask"
+        android:label="Create">
     </fragment>
 </navigation>
