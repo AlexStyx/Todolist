@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/initialFragment">
+
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.example.todolist.InitialScreen"
+        android:label="Initial"
+        app:defaultNavHost="true"
+        app:navGraph="@xml/nav_graph">
+        <action
+            android:id="@+id/initial_to_inbox_action"
+            app:destination="@id/Inbox" />
+        <action
+            android:id="@+id/initial_to_today_action"
+            app:destination="@id/Today" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Inbox"
+        android:name="com.example.todolist.Inbox"
+        android:label="Inbox">
+    </fragment>
+
+    <fragment
+        android:id="@+id/Today"
+        android:name="com.example.todolist.TodayList"
+        android:label="Today">
+    </fragment>
+</navigation>
